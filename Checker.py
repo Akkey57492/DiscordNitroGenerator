@@ -1,5 +1,6 @@
 import requests
 import json
+import time
 import re
 
 print("""
@@ -22,5 +23,7 @@ for code in codes:
 		print(f"ActiveNitro: {result}")
 	elif Failed == "You are being rate limited.":
 		print(f"Failed: {result}")
+		print("リクエストが拒否されました。")
+		print("120秒間処理を一時停止します。")
 	else:
 		print(f"InActiveNitro: {result}")
